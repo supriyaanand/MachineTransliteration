@@ -219,7 +219,6 @@ p_ends_with_n = re.compile(r'\w+n$')
 p_ends_with_o = re.compile(r'\w+o$')
 p_contains_in = re.compile(r'\w+in\w+')
 p_ends_with_i = re.compile(r'\w+i$')
-#p_is_punct = re.compile(r'\W+|\D+|\?+|\.+|\"+|\'+|:+|;+|!+|,+|\[+|\]+|\{+|\}+|\(+|\)+|=+|<+|>+|/+|-+|\||\/|\#|\$|&|\*')
 #p_is_punct = re.compile(r'[?."\':;!,\[\]{}()=<>/-|\\/#$&*]+')
 p_is_punct = re.compile(r'^[.\?#@+,<>%~`\!\$^&\(\):;\-\*\{\}\(\)\]\[\'=\\/_|]+$')
 p_is_smiley = re.compile(r'^:-?\'?\w+$|^;-?\'\w+$|:-?\'?\)|;-?\'?\(|:-?\'?\|;-?\'\)|;-?\'?\)|:-?\'?\/|;-?\'?\/|-_-|:-?\'?\(|:-?\'?\?')
@@ -254,8 +253,8 @@ def language_features(token):
     features['freq'] = freq
     features['check_is_stopword'] = check_is_stopword(token)
     #features['bigram_in_training'] = check_bigram_presense(bigram_list_training_corpus,token)
-    features['bigram_in_brown_corpus'] = check_bigram_presense(bigram_list_brown_corpus,token)
-    features['bigram_in_nps_chat_corpus'] = check_bigram_presense(bigram_list_nps_chat_corpus,token)
+    #features['bigram_in_brown_corpus'] = check_bigram_presense(bigram_list_brown_corpus,token)
+    #features['bigram_in_nps_chat_corpus'] = check_bigram_presense(bigram_list_nps_chat_corpus,token)
     #features['word_length'] = len(token)
     #print features
     return features
